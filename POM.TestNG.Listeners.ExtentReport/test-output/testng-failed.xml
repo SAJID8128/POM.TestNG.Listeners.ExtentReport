@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="appURL" value="https://google.com"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="google.Base.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Admin Tests(failed)">
+    <classes>
+      <class name="google.Tests.CreateAccountTest">
+        <methods>
+          <include name="verifyCreateAnAccountPage"/>
+          <include name="setUp"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- google.Tests.CreateAccountTest -->
+      <class name="google.Tests.SignInPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="verifySignInFunction"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- google.Tests.SignInPageTest -->
+    </classes>
+  </test> <!-- Admin Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
